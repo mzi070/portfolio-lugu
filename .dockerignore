@@ -1,0 +1,32 @@
+# Git files
+.git
+.gitignore
+
+# Documentation
+README.md
+LICENSE
+SETUP_CONTACT_FORM.md
+
+# Large files
+Portfolio.pdf
+*.pdf
+
+# Docker files (not needed in image)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

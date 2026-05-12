@@ -1,0 +1,28 @@
+# Large files
+Portfolio.pdf
+*.pdf
+
+# Logs
+logs/
+*.log
+
+# Docker volumes
+letsencrypt/
+caddy_data/
+caddy_config/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
