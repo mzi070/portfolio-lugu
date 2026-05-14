@@ -377,18 +377,17 @@ h2 {
 .collage-shortfilms a:nth-child(1) img,
 .collage-shortfilms img:nth-of-type(1) { left: 10%; top: 2%; width: 80%; z-index: 1; }
 
-/* EC02PR=football portrait cutout(bleeds), EC02=Fenaka march phone, EC01=football landscape */
-.collage-events > img:nth-of-type(1) { left: 20%; top: -2%;  width: 46%; z-index: 2; }
-.collage-events > a img              { left: 66%; top:  2%;  width: 28%; z-index: 3; }
-.collage-events > img:nth-of-type(2) { left:  6%; top:  8%;  width: 68%; z-index: 1; }
+/* EC02PR=football portrait cutout, EC02=Fenaka march instagram phone */
+.collage-events > img:nth-of-type(1) { left: 34%; top: -5%; width: 46%; z-index: 2; }
+.collage-events > a img              { left: 18%; top: 34%; width: 54%; z-index: 1; }
 
-/* P9: ME01=Fenaka boardroom phone(narrow portrait), ME02=blue-shirt cutout(landscape), ME03=V2045 tablet */
+/* P9: ME01=boardroom Instagram phone(large portrait), ME02=blue-shirt cutout, ME03=V2045 tablet */
 .collage-meetings a:nth-child(1) img,
-.collage-meetings img:nth-of-type(1) { left:  4%; top:  4%; width: 26%; z-index: 1; }
+.collage-meetings img:nth-of-type(1) { left: 28%; top: -5%; width: 50%; z-index: 2; }
 .collage-meetings a:nth-child(2) img,
-.collage-meetings img:nth-of-type(2) { left: 22%; top: 14%; width: 48%; z-index: 2; }
+.collage-meetings img:nth-of-type(2) { left:  2%; top: 46%; width: 50%; z-index: 1; }
 .collage-meetings a:nth-child(3) img,
-.collage-meetings img:nth-of-type(3) { left: 56%; top:  3%; width: 42%; z-index: 3; }
+.collage-meetings img:nth-of-type(3) { left: 46%; top: 50%; width: 46%; z-index: 3; }
 
 /* LB01=X-GEN brand booklet(landscape), LB02=Rana Heyg jar+label(landscape) */
 .collage-logos img:nth-child(1) { left:  6%; top: 12%; width: 44%; }
@@ -748,9 +747,8 @@ h2 {
   }
 
   /* Event Coverage adjustments for large screens/TVs */
-  .collage-events > img:nth-of-type(1) { left: 22%; top: -1%; width: 50%; }
-  .collage-events > a img { left: 72%; top: 3%; width: 26%; }
-  .collage-events > img:nth-of-type(2) { left: 10%; top: 7%; width: 70.5%; }
+  .collage-events > img:nth-of-type(1) { left: 36%; top: -5%; width: 44%; }
+  .collage-events > a img              { left: 20%; top: 36%; width: 52%; }
 
   /* Other showcase pages enhancements for large screens */
   .collage {
@@ -815,9 +813,8 @@ h2 {
     font-size: clamp(3.6rem, 5.2vw, 4.2rem);
   }
 
-  .collage-events > img:nth-of-type(1) { left: 20%; top: 1%; width: 51%; }
-  .collage-events > a img { left: 71%; top: 6%; width: 27%; }
-  .collage-events > img:nth-of-type(2) { left: 9%; top: 11%; width: 71%; }
+  .collage-events > img:nth-of-type(1) { left: 34%; top: -4%; width: 46%; }
+  .collage-events > a img              { left: 18%; top: 36%; width: 54%; }
 
   /* Other showcase pages for iPad/tablets */
   .content-columns {
@@ -1054,9 +1051,8 @@ h2 {
   }
 
   /* Event Coverage responsive adjustments for tablet */
-  .collage-events > img:nth-of-type(1) { left: 18%; top: 2%; width: 52%; }
-  .collage-events > a img { left: 70%; top: 5%; width: 28%; }
-  .collage-events > img:nth-of-type(2) { left: 8%; top: 10%; width: 72%; }
+  .collage-events > img:nth-of-type(1) { left: 34%; top: -4%; width: 46%; }
+  .collage-events > a img              { left: 18%; top: 36%; width: 54%; }
 
   /* Narrative Videos collage adjustments */
   .collage-narrative a:nth-child(1) img,
@@ -1084,11 +1080,11 @@ h2 {
 
   /* Meetings collage adjustments */
   .collage-meetings a:nth-child(1) img,
-  .collage-meetings img:nth-of-type(1) { left:  5%; top:  5%; width: 27%; z-index: 1; }
+  .collage-meetings img:nth-of-type(1) { left: 28%; top: -5%; width: 50%; z-index: 2; }
   .collage-meetings a:nth-child(2) img,
-  .collage-meetings img:nth-of-type(2) { left: 24%; top: 16%; width: 47%; z-index: 2; }
+  .collage-meetings img:nth-of-type(2) { left:  2%; top: 48%; width: 50%; z-index: 1; }
   .collage-meetings a:nth-child(3) img,
-  .collage-meetings img:nth-of-type(3) { left: 57%; top:  4%; width: 40%; z-index: 3; }
+  .collage-meetings img:nth-of-type(3) { left: 46%; top: 52%; width: 46%; z-index: 3; }
 
   /* Logos collage adjustments */
   .collage-logos img:nth-child(1) { left:  6%; top: 11%; width: 44%; }
@@ -1303,20 +1299,16 @@ h2 {
   .collage-shortfilms img:nth-of-type(1) { left:  5%; top: 4%; width: 88%; z-index: 1; }
 
   /* ── Event Coverage (page 8) ── */
-  .collage-events > img:nth-of-type(1) { left: 22%; top:  2%; width: 60%; }
-  .collage-events > a img              { left: 15%; top: 50%; width: 70%; }
-  .collage-events > img:nth-of-type(2) { left:  0%; top: 48%; width: 88%; }
+  .collage-events > img:nth-of-type(1) { left: 18%; top:  2%; width: 60%; }
+  .collage-events > a img              { left:  8%; top: 52%; width: 68%; }
 
   /* ── Meetings (page 9) ── */
-  /* child-1 = ME01 upper (main) */
-  /* child-2 = ME02 lower right */
-  /* child-3 = ME03 lower left */
   .collage-meetings a:nth-child(1) img,
-  .collage-meetings img:nth-of-type(1) { left: 22%; top:  2%; width: 62%; z-index: 1; }
+  .collage-meetings img:nth-of-type(1) { left: 10%; top:  2%; width: 64%; z-index: 2; }
   .collage-meetings a:nth-child(2) img,
-  .collage-meetings img:nth-of-type(2) { left: 40%; top: 50%; width: 54%; z-index: 3; }
+  .collage-meetings img:nth-of-type(2) { left:  0%; top: 50%; width: 62%; z-index: 1; }
   .collage-meetings a:nth-child(3) img,
-  .collage-meetings img:nth-of-type(3) { left:  0%; top: 48%; width: 64%; z-index: 2; }
+  .collage-meetings img:nth-of-type(3) { left: 36%; top: 52%; width: 62%; z-index: 3; }
 
   /* ── Logos & Branding (page 10) ── */
   .collage-logos img:nth-child(1) { left: 15%; top: 52%; width: 72%; }
@@ -1562,7 +1554,6 @@ h2 {
   }
 
   /* Landscape adjustments for showcase collages */
-  .collage-events > img:nth-of-type(1) { left: 18%; top: 2%; width: 52%; }
-  .collage-events > a img { left: 70%; top: 6%; width: 28%; }
-  .collage-events > img:nth-of-type(2) { left: 8%; top: 10%; width: 72%; }
+  .collage-events > img:nth-of-type(1) { left: 18%; top: 2%; width: 60%; }
+  .collage-events > a img              { left:  8%; top: 52%; width: 68%; }
 }
