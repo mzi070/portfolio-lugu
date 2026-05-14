@@ -327,6 +327,7 @@ h2 {
   font-style: italic;
   margin: 0.4rem 0 0;
   line-height: 1;
+  transition: font-size 0.4s ease;
 }
 
 /* ── non-showcase page title offsets ── */
@@ -346,7 +347,7 @@ h2 {
   max-width: none;
   height: auto;
   filter: drop-shadow(var(--card-shadow));
-  transition: transform 0.45s ease, filter 0.3s ease;
+  transition: transform 0.45s ease, filter 0.3s ease, left 0.4s ease, top 0.4s ease, width 0.4s ease;
 }
 
 /* General hover effect for non-clickable images (e.g., Event Coverage, Logos) */
@@ -820,7 +821,6 @@ h2 {
 
   .collage-events > img:nth-of-type(1) { left: 34%; top: -4%; width: 46%; }
   .collage-events > a img              { left: 18%; top: 36%; width: 54%; }
-  .sf-tv, .ec-tv { display: none; }
 
   /* Other showcase pages for iPad/tablets */
   .content-columns {
@@ -1056,9 +1056,6 @@ h2 {
     transform: none;
   }
 
-  /* Hide TV-frame composites on small screens */
-  .sf-tv, .ec-tv { display: none; }
-
   /* Event Coverage responsive adjustments for tablet */
   .collage-events > img:nth-of-type(1) { left: 34%; top: -4%; width: 46%; }
   .collage-events > a img              { left: 18%; top: 36%; width: 54%; }
@@ -1083,9 +1080,8 @@ h2 {
   .collage-interviews a:nth-child(2) img,
   .collage-interviews img:nth-of-type(2) { left: 20%; top: 2%; width: 75%; z-index: 1; }
 
-  /* Short Films: single composite image */
-  .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left: 10%; top: 2%; width: 80%; z-index: 1; }
+  /* Short Films: 2-image desktop layout at medium screens */
+  .collage-shortfilms a:nth-child(1) img { left: 52%; top:  2%; width: 34%; z-index: 2; }
 
   /* Meetings collage adjustments */
   .collage-meetings a:nth-child(1) img,
@@ -1284,13 +1280,13 @@ h2 {
   .collage-narrative img:nth-of-type(2) { left: 20%; top:  3%; width: 70%; z-index: 2; }
 
   /* ── Digital Flyers (page 5) ── */
-  /* child-1 = Bless Manfa post (upper main) */
-  /* child-2 = MNU fish post (lower left) */
+  /* child-1 = Bless Manfa post (lower left) */
+  /* child-2 = MNU fish post (TOP main) */
   /* child-3 = Beynun Tech post (lower right) */
   .collage-flyers a:nth-child(1) img,
-  .collage-flyers img:nth-of-type(1) { left: 22%; top:  3%; width: 68%; z-index: 3; }
+  .collage-flyers img:nth-of-type(1) { left:  4%; top: 50%; width: 54%; z-index: 2; }
   .collage-flyers a:nth-child(2) img,
-  .collage-flyers img:nth-of-type(2) { left:  4%; top: 50%; width: 54%; z-index: 2; }
+  .collage-flyers img:nth-of-type(2) { left: 22%; top:  3%; width: 68%; z-index: 3; }
   .collage-flyers a:nth-child(3) img,
   .collage-flyers img:nth-of-type(3) { left: 42%; top: 54%; width: 54%; z-index: 1; }
 
@@ -1303,12 +1299,14 @@ h2 {
   .collage-interviews img:nth-of-type(2) { left:  4%; top: 50%; width: 88%; z-index: 1; }
 
   /* ── Short Films (page 7) ── */
-  /* SF PR: single composite (mobile) */
-  .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left:  5%; top: 4%; width: 88%; z-index: 1; }
+  /* SF01: TV frame lower-left bleed (mobile) */
+  .collage-shortfilms .sf-tv             { display: block; left: -10%; top: 52%; width: 80%; z-index: 1; }
+  /* SF_PR: KUDA poster upper-right (mobile) */
+  .collage-shortfilms a:nth-child(1) img { left: 28%; top:  3%; width: 50%; z-index: 2; }
 
   /* ── Event Coverage (page 8) ── */
-  .collage-events > img:nth-of-type(1) { left: 18%; top:  2%; width: 60%; }
+  .collage-events .ec-tv               { display: none; }
+  .collage-events > img:nth-of-type(1) { left: 22%; top:  2%; width: 58%; }
   .collage-events > a img              { left:  8%; top: 52%; width: 68%; }
 
   /* ── Meetings (page 9) ── */
@@ -1328,9 +1326,9 @@ h2 {
   .collage-marketing img:nth-child(2) { left:  8%; top: 50%; width: 86%; }
 
   /* ── Banners (page 12) ── */
-  /* Two portrait rollup banners stacked vertically */
-  .collage-banners img:nth-child(1) { left: 22%; top:  2%; width: 55%; }
-  .collage-banners img:nth-child(2) { left: 25%; top: 52%; width: 55%; }
+  /* BN02 (V2045 islands) TOP, BN01 (woman+children alley) BOTTOM */
+  .collage-banners img:nth-child(1) { left: 22%; top: 52%; width: 55%; }
+  .collage-banners img:nth-child(2) { left: 25%; top:  2%; width: 55%; }
 
   /* ── Video Ads (page 13) ── */
   .collage-video a:nth-child(1) img,
@@ -1408,7 +1406,7 @@ h2 {
     left: 0;
     top: 0;
     width: 22vw;
-    height: 58%;
+    height: 100%;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-style: italic;
