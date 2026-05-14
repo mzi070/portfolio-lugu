@@ -265,19 +265,18 @@
     <section id="page-15" class="page thankyou-page">
       <div class="thankyou-content">
         <div class="thankyou-header">
-          <h2>LET'S WORK TOGETHER</h2>
-          <p class="thankyou-subtitle">Have a project in mind? Let's create something amazing.</p>
+          <h2>THANK YOU</h2>
+          <p class="thankyou-subtitle">FOR SCROLLING</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-form-wrapper">
             <h3>Send a Message</h3>
             <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-              <!-- Web3Forms Access Key - Get yours free at https://web3forms.com -->
               <input type="hidden" name="access_key" value="cd0d2c1e-6904-4f5c-9392-5afc1eb3b70e">
               <input type="hidden" name="subject" value="New Portfolio Contact from Website">
               <input type="hidden" name="from_name" value="Portfolio Contact Form">
-              
+
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required placeholder="Your name">
@@ -290,6 +289,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
               </div>
+              <div class="h-captcha" data-captcha="true"></div>
               <button type="submit" class="submit-btn">Send Message</button>
             </form>
           </div>
@@ -332,7 +332,7 @@
 
         <footer class="portfolio-footer">
           <p>&copy; 2026 Lugmaan Noor. All rights reserved.</p>
-          <p class="footer-note">Designed & Developed with passion</p>
+          <p class="footer-note">Designed &amp; Developed with passion</p>
         </footer>
       </div>
       <div class="section-progress" data-progress="14"></div>
@@ -342,5 +342,17 @@
   <button class="top-btn" aria-label="Scroll to top">Top</button>
 
   <script src="script.js"></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+      const hCaptcha = contactForm.querySelector('textarea[name=h-captcha-response]');
+      if (!hCaptcha || !hCaptcha.value) {
+        e.preventDefault();
+        alert('Please complete the captcha before sending.');
+        return;
+      }
+    });
+  </script>
 </body>
 </html>

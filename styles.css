@@ -63,6 +63,7 @@ h2 {
 /* P2 title_y=89px → hero-title sits at top of page because padding-top:89px on #page-2 */
 .hero-title {
   font-size: clamp(4rem, 8vw, 8rem);
+  font-style: italic;
   margin-bottom: 2.2rem;
   margin-top: 0;
 }
@@ -294,12 +295,11 @@ h2 {
   height: auto;
 }
 
-/* ── showcase layout: collage fixed height, title directly below ── */
+/* ── showcase layout: collage at top, title pushed to bottom (matches PDF) ── */
 .showcase {
-  justify-items: center;
-  align-content: start;
-  text-align: center;
-  /* auto auto: collage uses its explicit height, h2 uses its natural height */
+  justify-items: start;
+  align-content: space-between;
+  text-align: left;
   grid-template-rows: auto auto;
   padding-top: 52px;
   padding-bottom: 72px;
@@ -323,6 +323,7 @@ h2 {
 
 .showcase h2 {
   font-size: 92px;
+  font-style: italic;
   margin: 0.4rem 0 0;
   line-height: 1;
 }
@@ -436,12 +437,13 @@ h2 {
 
 /* showcase title font-sizes are now handled by .showcase h2 { font-size: 92px } above */
 
+/* ═══ Thank You / Contact Page ═══ */
 .thankyou-page {
   text-align: center;
   justify-items: center;
+  align-content: start;
 }
 
-/* ═══ Modern Thank You / Contact Page ═══ */
 .thankyou-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -450,23 +452,24 @@ h2 {
 
 .thankyou-header {
   text-align: center;
-  margin-bottom: clamp(40px, 6vh, 70px);
+  margin-bottom: clamp(30px, 4vh, 50px);
 }
 
 .thankyou-page h2 {
-  font-family: "Jost", sans-serif;
-  font-weight: 600;
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
-  line-height: 1.1;
+  font-family: "Poiret One", cursive;
+  font-weight: 400;
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  line-height: 1;
   letter-spacing: 0.02em;
-  color: var(--ink-dark);
-  margin-bottom: 16px;
+  color: var(--ink);
+  margin: 0 0 0.6rem;
 }
 
 .thankyou-subtitle {
   font-family: "Jost", sans-serif;
   font-weight: 300;
-  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  letter-spacing: 0.3em;
   color: var(--ink);
   margin: 0;
 }
@@ -660,13 +663,22 @@ h2 {
 
 @media (max-width: 600px) {
   .thankyou-header {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
-  
+
+  .thankyou-page h2 {
+    font-size: clamp(3rem, 11vw, 5.5rem);
+  }
+
+  .thankyou-subtitle {
+    font-size: clamp(0.8rem, 3.2vw, 1rem);
+    letter-spacing: 0.2em;
+  }
+
   .contact-grid {
     gap: 40px;
   }
-  
+
   .social-icons a {
     width: 44px;
     height: 44px;
@@ -756,6 +768,11 @@ h2 {
     height: clamp(460px, 62vh, 820px);
   }
 
+  .showcase h2 {
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-style: italic;
+  }
+
   .content-columns {
     gap: 88px;
     width: min(1340px, 92vw);
@@ -834,6 +851,7 @@ h2 {
 
   .showcase h2 {
     font-size: clamp(3.8rem, 7.5vw, 5.2rem);
+    font-style: italic;
   }
 }
 
@@ -876,6 +894,7 @@ h2 {
 
   .showcase h2 {
     font-size: clamp(3.5rem, 7.2vw, 5.8rem);
+    font-style: italic;
     margin-top: 12px;
   }
 
@@ -1013,7 +1032,7 @@ h2 {
 
   .showcase {
     padding-top: 44px;
-    align-content: start;
+    align-content: space-between;
   }
 
   .showcase h2 {
@@ -1217,86 +1236,248 @@ h2 {
     font-size: 1.4rem;
   }
 
-  .collage {
-    height: clamp(260px, 46vh, 360px);
+  /* ═══════════════════════════════════════════════════════════════
+     PDF LAYOUT: SHOWCASE SECTIONS — VERTICAL TITLE ON LEFT SIDE
+     ═══════════════════════════════════════════════════════════════ */
+  .showcase {
+    display: block !important;
+    position: relative;
+    padding: 0 !important;
+    min-height: 100svh;
+    overflow: hidden;
+    align-content: unset;
+    text-align: left;
   }
 
+  /* Section title: large italic vertical text on the left (matches PDF) */
+  .showcase h2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    height: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-style: italic;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 10;
+    line-height: 1;
+    padding: 16px 0;
+  }
+
+  /* Per-section title sizes tuned to title length (longer = smaller) */
+  #page-4  .showcase h2 { font-size: clamp(1.8rem, 6.2vw, 3rem); }
+  #page-8  .showcase h2 { font-size: clamp(1.8rem, 6.2vw, 3rem); }
+  #page-10 .showcase h2 { font-size: clamp(1.7rem, 6vw,   2.8rem); }
+  #page-11 .showcase h2 { font-size: clamp(1.4rem, 5vw,   2.3rem); }
+  #page-12 .showcase h2,
+  #page-13 .showcase h2 { font-size: clamp(2.6rem, 8.5vw, 4rem); }
+
+  /* Collage fills the full section viewport */
+  .showcase .collage {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: clip;
+  }
+
+  /* Hide progress bar on showcase sections (PDF has none) */
+  .showcase .section-progress {
+    display: none;
+  }
+
+  /* Images use explicit sizes — percentage positions are now relative to 100vw × 100svh */
   .collage img {
-    max-width: 62%;
+    max-width: none;
   }
 
-  /* Event Coverage responsive adjustments for mobile */
-  .collage-events > img:nth-of-type(1) { left: 15%; top: 5%; width: 56%; }
-  .collage-events > a img { left: 68%; top: 8%; width: 30%; }
-  .collage-events > img:nth-of-type(2) { left: 5%; top: 12%; width: 76%; }
-
-  /* All showcase collages centered and stacked for mobile */
+  /* ── Narrative Assets (page 4) ── */
+  /* child-1 = people photo (lower, bleeds left behind title) */
+  /* child-2 = Instagram boat post (upper right) */
+  /* child-3 = small Instagram post (lower right) */
   .collage-narrative a:nth-child(1) img,
-  .collage-narrative img:nth-of-type(1) { left: 8%; top: 8%; width: 58%; }
+  .collage-narrative img:nth-of-type(1) { left:  0%; top: 52%; width: 80%; z-index: 1; }
   .collage-narrative a:nth-child(2) img,
-  .collage-narrative img:nth-of-type(2) { left: 48%; top: 12%; width: 40%; }
+  .collage-narrative img:nth-of-type(2) { left: 22%; top:  3%; width: 70%; z-index: 2; }
   .collage-narrative a:nth-child(3) img,
-  .collage-narrative img:nth-of-type(3) { left: 68%; top: 28%; width: 28%; }
+  .collage-narrative img:nth-of-type(3) { left: 50%; top: 50%; width: 46%; z-index: 3; }
 
+  /* ── Digital Flyers (page 5) ── */
   .collage-flyers a:nth-child(1) img,
-  .collage-flyers img:nth-of-type(1) { left:  9%; top:  8%; width: 30%; z-index: 2; }
+  .collage-flyers img:nth-of-type(1) { left:  5%; top: 52%; width: 50%; z-index: 2; }
   .collage-flyers a:nth-child(2) img,
-  .collage-flyers img:nth-of-type(2) { left: 31%; top: 27%; width: 26%; z-index: 4; }
+  .collage-flyers img:nth-of-type(2) { left: 45%; top: 48%; width: 46%; z-index: 4; }
   .collage-flyers a:nth-child(3) img,
-  .collage-flyers img:nth-of-type(3) { left: 50%; top: 10%; width: 42%; z-index: 3; }
+  .collage-flyers img:nth-of-type(3) { left: 22%; top:  2%; width: 72%; z-index: 3; }
   .collage-flyers a:nth-child(4) img,
-  .collage-flyers img:nth-of-type(4) { left: 52%; top:  4%; width: 46%; z-index: 1; }
+  .collage-flyers img:nth-of-type(4) { left: 48%; top:  2%; width: 50%; z-index: 1; }
   .collage-flyers a:nth-child(5) img,
-  .collage-flyers img:nth-of-type(5) { left:  2%; top:  5%; width: 20%; z-index: 0; }
+  .collage-flyers img:nth-of-type(5) { left:  0%; top: 38%; width: 28%; z-index: 0; }
 
+  /* ── Interviews (page 6) ── */
   .collage-interviews a:nth-child(1) img,
-  .collage-interviews img:nth-of-type(1) { left: 7%; top: 12%; width: 28%; z-index: 3; }
+  .collage-interviews img:nth-of-type(1) { left: 22%; top:  3%; width: 54%; z-index: 3; }
   .collage-interviews a:nth-child(2) img,
-  .collage-interviews img:nth-of-type(2) { left: 22%; top: 4%; width: 70%; z-index: 1; }
+  .collage-interviews img:nth-of-type(2) { left: 20%; top:  3%; width: 68%; z-index: 1; }
   .collage-interviews a:nth-child(3) img,
-  .collage-interviews img:nth-of-type(3) { left: 46%; top: 2%; width: 52%; z-index: 2; }
+  .collage-interviews img:nth-of-type(3) { left:  0%; top: 50%; width: 100%; z-index: 2; }
 
+  /* ── Short Films (page 7) ── */
+  /* child-1 = actor/umbrella cutout (lower left bleed) */
+  /* child-2 = TV/scene (lower) */
+  /* child-3 = KUDA poster (upper right) */
   .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left: 4%; top: 16%; width: 40%; z-index: 3; }
+  .collage-shortfilms img:nth-of-type(1) { left:  0%; top: 48%; width: 60%; z-index: 3; }
   .collage-shortfilms a:nth-child(2) img,
-  .collage-shortfilms img:nth-of-type(2) { left: 14%; top: 18%; width: 76%; z-index: 1; }
+  .collage-shortfilms img:nth-of-type(2) { left:  5%; top: 52%; width: 90%; z-index: 1; }
   .collage-shortfilms a:nth-child(3) img,
-  .collage-shortfilms img:nth-of-type(3) { left: 50%; top: 14%; width: 44%; z-index: 2; }
+  .collage-shortfilms img:nth-of-type(3) { left: 22%; top:  2%; width: 66%; z-index: 2; }
 
+  /* ── Event Coverage (page 8) ── */
+  .collage-events > img:nth-of-type(1) { left: 22%; top:  2%; width: 60%; }
+  .collage-events > a img              { left: 15%; top: 50%; width: 70%; }
+  .collage-events > img:nth-of-type(2) { left:  0%; top: 48%; width: 88%; }
+
+  /* ── Meetings (page 9) ── */
   .collage-meetings a:nth-child(1) img,
-  .collage-meetings img:nth-of-type(1) { left: 10%; top: 20%; width: 54%; }
+  .collage-meetings img:nth-of-type(1) { left: 22%; top:  2%; width: 58%; }
   .collage-meetings a:nth-child(2) img,
-  .collage-meetings img:nth-of-type(2) { left: 38%; top: 36%; width: 48%; }
+  .collage-meetings img:nth-of-type(2) { left: 46%; top: 50%; width: 50%; }
   .collage-meetings a:nth-child(3) img,
-  .collage-meetings img:nth-of-type(3) { left: 60%; top: 12%; width: 42%; }
+  .collage-meetings img:nth-of-type(3) { left:  0%; top: 48%; width: 72%; }
   .collage-meetings a:nth-child(4) img,
-  .collage-meetings img:nth-of-type(4) { left: 4%; top: 28%; width: 28%; }
+  .collage-meetings img:nth-of-type(4) { left: 58%; top:  3%; width: 40%; }
 
-  .collage-logos img:nth-child(1) { left: 18%; top: 24%; width: 38%; }
-  .collage-logos img:nth-child(2) { left: 42%; top: 20%; width: 52%; }
+  /* ── Logos & Branding (page 10) ── */
+  .collage-logos img:nth-child(1) { left: 15%; top: 52%; width: 72%; }
+  .collage-logos img:nth-child(2) { left: 20%; top:  4%; width: 72%; }
 
-  .collage-marketing img:nth-child(1) { left: 14%; top: 22%; width: 46%; }
-  .collage-marketing img:nth-child(2) { left: 44%; top: 10%; width: 58%; }
+  /* ── Marketing Collateral (page 11) ── */
+  .collage-marketing img:nth-child(1) { left: 22%; top:  3%; width: 68%; }
+  .collage-marketing img:nth-child(2) { left:  8%; top: 50%; width: 86%; }
 
-  .collage-banners img:nth-child(1) { left: 30%; top: 12%; width: 24%; }
-  .collage-banners img:nth-child(2) { left: 52%; top: 12%; width: 24%; }
-  .collage-banners img:nth-child(3) { left: 12%; top: 20%; width: 40%; }
-  .collage-banners img:nth-child(4) { left: 38%; top: 54%; width: 38%; }
+  /* ── Banners (page 12) ── */
+  .collage-banners img:nth-child(1) { left: 22%; top:  4%; width: 36%; }
+  .collage-banners img:nth-child(2) { left: 50%; top:  4%; width: 36%; }
+  .collage-banners img:nth-child(3) { left:  2%; top: 52%; width: 55%; opacity: 0.7; }
+  .collage-banners img:nth-child(4) { left: 18%; top: 30%; width: 62%; opacity: 0.55; }
 
+  /* ── Video Ads (page 13) ── */
   .collage-video a:nth-child(1) img,
-  .collage-video img:nth-of-type(1) { left: 8%; top: 20%; width: 34%; }
+  .collage-video img:nth-of-type(1) { left: 25%; top:  3%; width: 52%; }
   .collage-video a:nth-child(2) img,
-  .collage-video img:nth-of-type(2) { left: 32%; top: 14%; width: 68%; }
+  .collage-video img:nth-of-type(2) { left:  5%; top: 50%; width: 88%; }
 
-  .collage-interior img:nth-child(1) { left: 10%; top: 28%; width: 46%; }
-  .collage-interior img:nth-child(2) { left: 34%; top: 12%; width: 68%; }
+  /* ── Interior Design (page 14) ── */
+  .collage-interior img:nth-child(1) { left: 18%; top:  4%; width: 76%; }
+  .collage-interior img:nth-child(2) { left:  8%; top: 50%; width: 85%; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     Contents page (page-2): "Contents" vertical title on left
+     ═══════════════════════════════════════════════════════════════ */
+  #page-2 {
+    position: relative;
+    padding-left: 24vw !important;
+    padding-right: 14px !important;
+    padding-top: 36px !important;
+    min-height: 100svh;
+    align-content: start;
+  }
+
+  #page-2 .hero-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 22vw;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-style: italic;
+    font-size: clamp(3rem, 9.5vw, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 5;
+    line-height: 1;
+  }
+
+  #page-2 .content-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+  }
+
+  #page-2 .content-columns ul {
+    gap: 14px;
+  }
+
+  #page-2 .content-columns a {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+  }
+
+  #page-2 .section-progress {
+    display: none;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     About Me page (page-3): vertical title on left, portrait right
+     ═══════════════════════════════════════════════════════════════ */
+  #page-3 {
+    position: relative;
+    padding-left: 24vw !important;
+    padding-right: 14px !important;
+    padding-top: 24px !important;
+    min-height: 100svh;
+    align-content: start;
+  }
+
+  #page-3 .hero-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22vw;
+    height: 58%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-style: italic;
+    font-size: clamp(1.8rem, 6.5vw, 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 5;
+    line-height: 1;
+  }
+
+  #page-3 .about-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 0;
+    justify-items: center;
+  }
+
+  #page-3 .portrait-wrap {
+    width: min(200px, 62vw);
+  }
+
+  #page-3 .about-copy {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  #page-3 .section-progress {
+    display: none;
+  }
 
   .hero-title {
     font-size: clamp(3.2rem, 7vw, 5.5rem);
-  }
-
-  .showcase h2 {
-    font-size: clamp(2.8rem, 6.5vw, 4.2rem);
   }
 }
 
@@ -1342,83 +1523,30 @@ h2 {
     font-size: 1.2rem;
   }
 
-  .collage {
-    height: clamp(220px, 42vh, 320px);
-  }
+  /* Showcase collage heights are handled by the 600px .showcase .collage rule */
 
-  /* Event Coverage adjustments for very small phones */
-  .collage-events > img:nth-of-type(1) { left: 12%; top: 6%; width: 58%; }
-  .collage-events > a img { left: 66%; top: 10%; width: 32%; }
-  .collage-events > img:nth-of-type(2) { left: 3%; top: 14%; width: 78%; }
-
+  /* Vertical title — smaller on very small phones */
   .showcase h2 {
-    font-size: clamp(2.8rem, 8vw, 3.5rem);
+    font-size: clamp(1.7rem, 6vw, 2.8rem);
+    width: 18vw;
   }
+
+  #page-4  .showcase h2 { font-size: clamp(1.5rem, 5.5vw, 2.5rem); }
+  #page-8  .showcase h2 { font-size: clamp(1.5rem, 5.5vw, 2.5rem); }
+  #page-10 .showcase h2 { font-size: clamp(1.4rem, 5.2vw, 2.4rem); }
+  #page-11 .showcase h2 { font-size: clamp(1.2rem, 4.5vw, 2rem); }
+
+  /* Contents page narrower title strip */
+  #page-2 { padding-left: 22vw !important; }
+  #page-2 .hero-title { width: 20vw; font-size: clamp(2.5rem, 8vw, 4rem); }
+
+  /* About Me page narrower title strip */
+  #page-3 { padding-left: 22vw !important; }
+  #page-3 .hero-title { width: 20vw; font-size: clamp(1.5rem, 5.5vw, 2.5rem); }
 
   .hero-title {
     font-size: clamp(2.6rem, 6.5vw, 4.2rem);
   }
-
-  /* Further adjustments for all collages on very small phones */
-  .collage-narrative a:nth-child(1) img,
-  .collage-narrative img:nth-of-type(1) { left: 10%; top: 10%; width: 60%; }
-  .collage-narrative a:nth-child(2) img,
-  .collage-narrative img:nth-of-type(2) { left: 50%; top: 16%; width: 44%; }
-  .collage-narrative a:nth-child(3) img,
-  .collage-narrative img:nth-of-type(3) { left: 66%; top: 34%; width: 32%; }
-
-  .collage-flyers a:nth-child(1) img,
-  .collage-flyers img:nth-of-type(1) { left: 10%; top: 10%; width: 32%; z-index: 2; }
-  .collage-flyers a:nth-child(2) img,
-  .collage-flyers img:nth-of-type(2) { left: 33%; top: 30%; width: 28%; z-index: 4; }
-  .collage-flyers a:nth-child(3) img,
-  .collage-flyers img:nth-of-type(3) { left: 51%; top: 11%; width: 42%; z-index: 3; }
-  .collage-flyers a:nth-child(4) img,
-  .collage-flyers img:nth-of-type(4) { left: 53%; top:  5%; width: 46%; z-index: 1; }
-  .collage-flyers a:nth-child(5) img,
-  .collage-flyers img:nth-of-type(5) { left:  3%; top:  5%; width: 22%; z-index: 0; }
-
-  .collage-interviews a:nth-child(1) img,
-  .collage-interviews img:nth-of-type(1) { left: 8%; top: 12%; width: 30%; z-index: 3; }
-  .collage-interviews a:nth-child(2) img,
-  .collage-interviews img:nth-of-type(2) { left: 22%; top: 4%; width: 72%; z-index: 1; }
-  .collage-interviews a:nth-child(3) img,
-  .collage-interviews img:nth-of-type(3) { left: 44%; top: 2%; width: 54%; z-index: 2; }
-
-  .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left: 6%; top: 18%; width: 42%; z-index: 3; }
-  .collage-shortfilms a:nth-child(2) img,
-  .collage-shortfilms img:nth-of-type(2) { left: 16%; top: 22%; width: 78%; z-index: 1; }
-  .collage-shortfilms a:nth-child(3) img,
-  .collage-shortfilms img:nth-of-type(3) { left: 48%; top: 16%; width: 48%; z-index: 2; }
-
-  .collage-meetings a:nth-child(1) img,
-  .collage-meetings img:nth-of-type(1) { left: 12%; top: 24%; width: 56%; }
-  .collage-meetings a:nth-child(2) img,
-  .collage-meetings img:nth-of-type(2) { left: 40%; top: 42%; width: 52%; }
-  .collage-meetings a:nth-child(3) img,
-  .collage-meetings img:nth-of-type(3) { left: 58%; top: 14%; width: 46%; }
-  .collage-meetings a:nth-child(4) img,
-  .collage-meetings img:nth-of-type(4) { left: 6%; top: 32%; width: 32%; }
-
-  .collage-logos img:nth-child(1) { left: 20%; top: 28%; width: 42%; }
-  .collage-logos img:nth-child(2) { left: 40%; top: 24%; width: 56%; }
-
-  .collage-marketing img:nth-child(1) { left: 16%; top: 26%; width: 50%; }
-  .collage-marketing img:nth-child(2) { left: 42%; top: 14%; width: 62%; }
-
-  .collage-banners img:nth-child(1) { left: 32%; top: 16%; width: 26%; }
-  .collage-banners img:nth-child(2) { left: 50%; top: 16%; width: 26%; }
-  .collage-banners img:nth-child(3) { left: 14%; top: 26%; width: 44%; }
-  .collage-banners img:nth-child(4) { left: 36%; top: 58%; width: 42%; }
-
-  .collage-video a:nth-child(1) img,
-  .collage-video img:nth-of-type(1) { left: 10%; top: 24%; width: 36%; }
-  .collage-video a:nth-child(2) img,
-  .collage-video img:nth-of-type(2) { left: 30%; top: 18%; width: 70%; }
-
-  .collage-interior img:nth-child(1) { left: 12%; top: 32%; width: 50%; }
-  .collage-interior img:nth-child(2) { left: 32%; top: 16%; width: 72%; }
 }
 
 /* Landscape mobile devices */
