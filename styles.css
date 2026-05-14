@@ -1319,9 +1319,9 @@ h2 {
   .collage-marketing img:nth-child(2) { left:  8%; top: 50%; width: 86%; }
 
   /* ── Banners (page 12) ── */
-  /* Two portrait rollup banners side by side */
-  .collage-banners img:nth-child(1) { left: 22%; top:  4%; width: 36%; }
-  .collage-banners img:nth-child(2) { left: 52%; top:  4%; width: 36%; }
+  /* Two portrait rollup banners stacked vertically */
+  .collage-banners img:nth-child(1) { left: 22%; top:  2%; width: 55%; }
+  .collage-banners img:nth-child(2) { left: 25%; top: 52%; width: 55%; }
 
   /* ── Video Ads (page 13) ── */
   .collage-video a:nth-child(1) img,
