@@ -373,11 +373,9 @@ h2 {
 .collage-interviews a:nth-child(2) img,
 .collage-interviews img:nth-of-type(2) { left: 16%; top:  0%; width: 78%; z-index: 1; }
 
-/* SF01=wide TV+umbrella+poster landscape, SF PR=KUDA poster+TV portrait composite */
+/* SF PR = single composite: poster+TV, portrait-ish */
 .collage-shortfilms a:nth-child(1) img,
-.collage-shortfilms img:nth-of-type(1) { left:  2%; top:  6%; width: 62%; z-index: 1; }
-.collage-shortfilms a:nth-child(2) img,
-.collage-shortfilms img:nth-of-type(2) { left: 57%; top:  2%; width: 38%; z-index: 2; }
+.collage-shortfilms img:nth-of-type(1) { left: 10%; top: 2%; width: 80%; z-index: 1; }
 
 /* EC02PR=football portrait cutout(bleeds), EC02=Fenaka march phone, EC01=football landscape */
 .collage-events > img:nth-of-type(1) { left: 20%; top: -2%;  width: 46%; z-index: 2; }
@@ -1080,11 +1078,9 @@ h2 {
   .collage-interviews a:nth-child(2) img,
   .collage-interviews img:nth-of-type(2) { left: 20%; top: 2%; width: 75%; z-index: 1; }
 
-  /* Short Films collage adjustments */
+  /* Short Films: single composite image */
   .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left:  4%; top:  9%; width: 59%; z-index: 1; }
-  .collage-shortfilms a:nth-child(2) img,
-  .collage-shortfilms img:nth-of-type(2) { left: 59%; top:  5%; width: 37%; z-index: 2; }
+  .collage-shortfilms img:nth-of-type(1) { left: 10%; top: 2%; width: 80%; z-index: 1; }
 
   /* Meetings collage adjustments */
   .collage-meetings a:nth-child(1) img,
@@ -1302,12 +1298,9 @@ h2 {
   .collage-interviews img:nth-of-type(2) { left:  4%; top: 50%; width: 88%; z-index: 1; }
 
   /* ── Short Films (page 7) ── */
-  /* child-1 = sf01 wide scene (lower) */
-  /* child-2 = SF PR poster portrait (upper) */
+  /* SF PR: single composite (mobile) */
   .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left:  4%; top: 50%; width: 88%; z-index: 1; }
-  .collage-shortfilms a:nth-child(2) img,
-  .collage-shortfilms img:nth-of-type(2) { left: 22%; top:  3%; width: 58%; z-index: 2; }
+  .collage-shortfilms img:nth-of-type(1) { left:  5%; top: 4%; width: 88%; z-index: 1; }
 
   /* ── Event Coverage (page 8) ── */
   .collage-events > img:nth-of-type(1) { left: 22%; top:  2%; width: 60%; }
