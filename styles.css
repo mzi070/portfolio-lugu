@@ -121,9 +121,9 @@ h2 {
 .cover-icons {
   width: min(1200px, 92vw);
   display: grid;
-  grid-template-columns: repeat(8, minmax(40px, 130px));
+  grid-template-columns: repeat(9, minmax(40px, 115px));
   justify-content: center;
-  gap: clamp(14px, 2vw, 32px);
+  gap: clamp(12px, 1.8vw, 28px);
   margin-top: 8px;
 }
 
@@ -134,7 +134,7 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-/* 8 icons matching PDF layout: OpenAI, Id, Ai, Ps, Lr, Resolve, Ae, Pr */
+/* 9 icons matching new brand set */
 .cover-icons img:nth-child(1) { transform: translateY(22px) rotate(-12deg) scale(0.92); }
 .cover-icons img:nth-child(2) { transform: translateY(62px) rotate(-8deg) scale(0.88); }
 .cover-icons img:nth-child(3) { transform: translateY(12px) rotate(-18deg) scale(1.15); }
@@ -143,6 +143,7 @@ h2 {
 .cover-icons img:nth-child(6) { transform: translateY(38px) scale(1.32); }
 .cover-icons img:nth-child(7) { transform: translateY(6px) rotate(8deg) scale(0.96); }
 .cover-icons img:nth-child(8) { transform: translateY(52px) rotate(12deg) scale(1.02); }
+.cover-icons img:nth-child(9) { transform: translateY(18px) rotate(-5deg) scale(0.98); }
 
 .cover-page h1 {
   font-family: "Jost", sans-serif;
@@ -354,37 +355,27 @@ h2 {
 }
 
 .collage-narrative a:nth-child(1) img,
-.collage-narrative img:nth-of-type(1) { left: 4%; top: 2%; width: 52%; }
+.collage-narrative img:nth-of-type(1) { left: 3%; top: 2%; width: 58%; }
 .collage-narrative a:nth-child(2) img,
-.collage-narrative img:nth-of-type(2) { left: 44%; top: 3%; width: 34%; }
-.collage-narrative a:nth-child(3) img,
-.collage-narrative img:nth-of-type(3) { left: 72%; top: 20%; width: 24%; }
+.collage-narrative img:nth-of-type(2) { left: 48%; top: 3%; width: 46%; }
 
-/* P5: imgs 3 and 4 previously went to 101-102% right edge — capped to 96-98% */
+/* P5: 3-image flyer layout */
 .collage-flyers a:nth-child(1) img,
-.collage-flyers img:nth-of-type(1) { left:  7%; top:  4%; width: 27%; z-index: 2; }
+.collage-flyers img:nth-of-type(1) { left:  3%; top:  8%; width: 30%; z-index: 2; }
 .collage-flyers a:nth-child(2) img,
-.collage-flyers img:nth-of-type(2) { left: 28%; top: 22%; width: 24%; z-index: 4; }
+.collage-flyers img:nth-of-type(2) { left: 32%; top: 14%; width: 30%; z-index: 1; }
 .collage-flyers a:nth-child(3) img,
-.collage-flyers img:nth-of-type(3) { left: 48%; top:  8%; width: 42%; z-index: 3; }
-.collage-flyers a:nth-child(4) img,
-.collage-flyers img:nth-of-type(4) { left: 50%; top:  2%; width: 47%; z-index: 1; }
-.collage-flyers a:nth-child(5) img,
-.collage-flyers img:nth-of-type(5) { left:  0%;  top:  5%; width: 18%; z-index: 0; }
+.collage-flyers img:nth-of-type(3) { left: 58%; top:  3%; width: 36%; z-index: 3; }
 
 .collage-interviews a:nth-child(1) img,
-.collage-interviews img:nth-of-type(1) { left: 4%; top: 5%; width: 24%; z-index: 3; }
+.collage-interviews img:nth-of-type(1) { left: 4%; top: 5%; width: 24%; z-index: 2; }
 .collage-interviews a:nth-child(2) img,
-.collage-interviews img:nth-of-type(2) { left: 19%; top: 2%; width: 66%; z-index: 1; }
-.collage-interviews a:nth-child(3) img,
-.collage-interviews img:nth-of-type(3) { left: 45%; top: 0%; width: 50%; z-index: 2; }
+.collage-interviews img:nth-of-type(2) { left: 20%; top: 2%; width: 74%; z-index: 1; }
 
 .collage-shortfilms a:nth-child(1) img,
-.collage-shortfilms img:nth-of-type(1) { left: 1%; top: 10%; width: 34%; z-index: 3; }
+.collage-shortfilms img:nth-of-type(1) { left:  4%; top:  8%; width: 58%; z-index: 1; }
 .collage-shortfilms a:nth-child(2) img,
-.collage-shortfilms img:nth-of-type(2) { left: 10%; top: 11%; width: 72%; z-index: 1; }
-.collage-shortfilms a:nth-child(3) img,
-.collage-shortfilms img:nth-of-type(3) { left: 48%; top: 8%; width: 38%; z-index: 2; }
+.collage-shortfilms img:nth-of-type(2) { left: 58%; top:  4%; width: 36%; z-index: 2; }
 
 .collage-events > img:nth-of-type(1) { left: 22%; top: -0.5%; width: 50%; z-index: 2; }
 .collage-events > a img { left: 72%; top: 4%; width: 26%; z-index: 3; }
@@ -407,11 +398,9 @@ h2 {
 .collage-marketing img:nth-child(1) { left: 10%; top: 16%; width: 40%; }
 .collage-marketing img:nth-child(2) { left: 44%; top:  4%; width: 52%; }
 
-/* P12: banners start higher so the bottom of the roll-up stand fills the collage */
-.collage-banners img:nth-child(1) { left: 28%; top:  6%; width: 21%; }
-.collage-banners img:nth-child(2) { left: 50%; top:  6%; width: 21%; }
-.collage-banners img:nth-child(3) { left:  8%; top: 14%; width: 37%; opacity: 0.72; }
-.collage-banners img:nth-child(4) { left: 36%; top: 48%; width: 34%; opacity: 0.72; }
+/* P12: two portrait rollup banners centred */
+.collage-banners img:nth-child(1) { left: 18%; top:  4%; width: 28%; }
+.collage-banners img:nth-child(2) { left: 54%; top:  4%; width: 28%; }
 
 /* P13: tall kiosk screen left (narrow), large TV right (dominant) */
 .collage-video a:nth-child(1) img,
@@ -867,8 +856,8 @@ h2 {
 
   .cover-icons {
     width: min(850px, 88vw);
-    grid-template-columns: repeat(8, minmax(45px, 100px));
-    gap: clamp(12px, 1.8vw, 20px);
+    grid-template-columns: repeat(9, minmax(40px, 88px));
+    gap: clamp(10px, 1.6vw, 18px);
   }
 
   .cover-page h1 {
@@ -1071,49 +1060,37 @@ h2 {
 
   /* Narrative Videos collage adjustments */
   .collage-narrative a:nth-child(1) img,
-  .collage-narrative img:nth-of-type(1) { left: 6%; top: 4%; width: 54%; }
+  .collage-narrative img:nth-of-type(1) { left: 4%; top: 3%; width: 58%; }
   .collage-narrative a:nth-child(2) img,
-  .collage-narrative img:nth-of-type(2) { left: 46%; top: 6%; width: 36%; }
-  .collage-narrative a:nth-child(3) img,
-  .collage-narrative img:nth-of-type(3) { left: 70%; top: 22%; width: 26%; }
+  .collage-narrative img:nth-of-type(2) { left: 48%; top: 4%; width: 46%; }
 
   /* Flyers collage adjustments */
   .collage-flyers a:nth-child(1) img,
-  .collage-flyers img:nth-of-type(1) { left:  8%; top:  6%; width: 28%; z-index: 2; }
+  .collage-flyers img:nth-of-type(1) { left:  4%; top:  8%; width: 30%; z-index: 2; }
   .collage-flyers a:nth-child(2) img,
-  .collage-flyers img:nth-of-type(2) { left: 29%; top: 23%; width: 25%; z-index: 4; }
+  .collage-flyers img:nth-of-type(2) { left: 33%; top: 14%; width: 31%; z-index: 1; }
   .collage-flyers a:nth-child(3) img,
-  .collage-flyers img:nth-of-type(3) { left: 49%; top:  9%; width: 42%; z-index: 3; }
-  .collage-flyers a:nth-child(4) img,
-  .collage-flyers img:nth-of-type(4) { left: 51%; top:  3%; width: 47%; z-index: 1; }
-  .collage-flyers a:nth-child(5) img,
-  .collage-flyers img:nth-of-type(5) { left:  1%; top:  5%; width: 18%; z-index: 0; }
+  .collage-flyers img:nth-of-type(3) { left: 60%; top:  4%; width: 36%; z-index: 3; }
 
   /* Interviews collage adjustments */
   .collage-interviews a:nth-child(1) img,
-  .collage-interviews img:nth-of-type(1) { left: 5%; top: 7%; width: 25%; z-index: 3; }
+  .collage-interviews img:nth-of-type(1) { left: 4%; top: 6%; width: 25%; z-index: 2; }
   .collage-interviews a:nth-child(2) img,
-  .collage-interviews img:nth-of-type(2) { left: 20%; top: 3%; width: 68%; z-index: 1; }
-  .collage-interviews a:nth-child(3) img,
-  .collage-interviews img:nth-of-type(3) { left: 46%; top: 0%; width: 52%; z-index: 2; }
+  .collage-interviews img:nth-of-type(2) { left: 20%; top: 2%; width: 75%; z-index: 1; }
 
   /* Short Films collage adjustments */
   .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left: 2%; top: 12%; width: 36%; z-index: 3; }
+  .collage-shortfilms img:nth-of-type(1) { left:  4%; top:  9%; width: 59%; z-index: 1; }
   .collage-shortfilms a:nth-child(2) img,
-  .collage-shortfilms img:nth-of-type(2) { left: 12%; top: 13%; width: 74%; z-index: 1; }
-  .collage-shortfilms a:nth-child(3) img,
-  .collage-shortfilms img:nth-of-type(3) { left: 50%; top: 10%; width: 40%; z-index: 2; }
+  .collage-shortfilms img:nth-of-type(2) { left: 59%; top:  5%; width: 37%; z-index: 2; }
 
   /* Meetings collage adjustments */
   .collage-meetings a:nth-child(1) img,
-  .collage-meetings img:nth-of-type(1) { left: 8%; top: 16%; width: 50%; }
+  .collage-meetings img:nth-of-type(1) { left: 5%; top: 13%; width: 52%; }
   .collage-meetings a:nth-child(2) img,
-  .collage-meetings img:nth-of-type(2) { left: 36%; top: 30%; width: 44%; }
+  .collage-meetings img:nth-of-type(2) { left: 38%; top: 23%; width: 41%; }
   .collage-meetings a:nth-child(3) img,
-  .collage-meetings img:nth-of-type(3) { left: 62%; top: 9%; width: 38%; }
-  .collage-meetings a:nth-child(4) img,
-  .collage-meetings img:nth-of-type(4) { left: 2%; top: 24%; width: 24%; }
+  .collage-meetings img:nth-of-type(3) { left: 62%; top:  6%; width: 35%; }
 
   /* Logos collage adjustments */
   .collage-logos img:nth-child(1) { left: 15%; top: 20%; width: 34%; }
@@ -1124,10 +1101,8 @@ h2 {
   .collage-marketing img:nth-child(2) { left: 45%; top: 6%; width: 54%; }
 
   /* Banners collage adjustments */
-  .collage-banners img:nth-child(1) { left: 29%; top: 8%; width: 22%; }
-  .collage-banners img:nth-child(2) { left: 51%; top: 8%; width: 22%; }
-  .collage-banners img:nth-child(3) { left: 9%; top: 16%; width: 38%; }
-  .collage-banners img:nth-child(4) { left: 37%; top: 50%; width: 36%; }
+  .collage-banners img:nth-child(1) { left: 18%; top: 5%; width: 28%; }
+  .collage-banners img:nth-child(2) { left: 54%; top: 5%; width: 28%; }
 
   /* Video collage adjustments */
   .collage-video a:nth-child(1) img,
@@ -1149,7 +1124,7 @@ h2 {
   /* Cover page adjustments for tablets */
   .cover-icons {
     width: min(620px, 90vw);
-    grid-template-columns: repeat(8, minmax(45px, 72px));
+    grid-template-columns: repeat(9, minmax(40px, 65px));
     gap: clamp(10px, 1.6vw, 16px);
     margin-top: 10px;
   }
@@ -1162,6 +1137,7 @@ h2 {
   .cover-icons img:nth-child(6) { transform: translateY(26px) scale(1.16); }
   .cover-icons img:nth-child(7) { transform: translateY(5px) rotate(6deg) scale(0.92); }
   .cover-icons img:nth-child(8) { transform: translateY(34px) rotate(9deg) scale(0.98); }
+  .cover-icons img:nth-child(9) { transform: translateY(14px) rotate(-4deg) scale(0.94); }
 
   .cover-page h1 {
     font-size: clamp(4rem, 8.5vw, 6rem);
@@ -1297,46 +1273,39 @@ h2 {
   }
 
   /* ── Narrative Assets (page 4) ── */
-  /* child-1 = people photo (lower, bleeds left behind title) */
-  /* child-2 = Instagram boat post (upper right) */
-  /* child-3 = small Instagram post (lower right) */
+  /* child-1 = landscape photo (lower bleed) */
+  /* child-2 = Instagram post (upper) */
   .collage-narrative a:nth-child(1) img,
-  .collage-narrative img:nth-of-type(1) { left:  0%; top: 52%; width: 80%; z-index: 1; }
+  .collage-narrative img:nth-of-type(1) { left:  0%; top: 52%; width: 84%; z-index: 1; }
   .collage-narrative a:nth-child(2) img,
-  .collage-narrative img:nth-of-type(2) { left: 22%; top:  3%; width: 70%; z-index: 2; }
-  .collage-narrative a:nth-child(3) img,
-  .collage-narrative img:nth-of-type(3) { left: 50%; top: 50%; width: 46%; z-index: 3; }
+  .collage-narrative img:nth-of-type(2) { left: 20%; top:  3%; width: 70%; z-index: 2; }
 
   /* ── Digital Flyers (page 5) ── */
+  /* child-1 = Bless Manfa post (upper main) */
+  /* child-2 = MNU fish post (lower left) */
+  /* child-3 = Beynun Tech post (lower right) */
   .collage-flyers a:nth-child(1) img,
-  .collage-flyers img:nth-of-type(1) { left:  5%; top: 52%; width: 50%; z-index: 2; }
+  .collage-flyers img:nth-of-type(1) { left: 22%; top:  3%; width: 68%; z-index: 3; }
   .collage-flyers a:nth-child(2) img,
-  .collage-flyers img:nth-of-type(2) { left: 45%; top: 48%; width: 46%; z-index: 4; }
+  .collage-flyers img:nth-of-type(2) { left:  4%; top: 50%; width: 54%; z-index: 2; }
   .collage-flyers a:nth-child(3) img,
-  .collage-flyers img:nth-of-type(3) { left: 22%; top:  2%; width: 72%; z-index: 3; }
-  .collage-flyers a:nth-child(4) img,
-  .collage-flyers img:nth-of-type(4) { left: 48%; top:  2%; width: 50%; z-index: 1; }
-  .collage-flyers a:nth-child(5) img,
-  .collage-flyers img:nth-of-type(5) { left:  0%; top: 38%; width: 28%; z-index: 0; }
+  .collage-flyers img:nth-of-type(3) { left: 42%; top: 54%; width: 54%; z-index: 1; }
 
   /* ── Interviews (page 6) ── */
+  /* child-1 = Instagram reel portrait (upper) */
+  /* child-2 = PSM News wide frame (lower) */
   .collage-interviews a:nth-child(1) img,
-  .collage-interviews img:nth-of-type(1) { left: 22%; top:  3%; width: 54%; z-index: 3; }
+  .collage-interviews img:nth-of-type(1) { left: 22%; top:  3%; width: 52%; z-index: 2; }
   .collage-interviews a:nth-child(2) img,
-  .collage-interviews img:nth-of-type(2) { left: 20%; top:  3%; width: 68%; z-index: 1; }
-  .collage-interviews a:nth-child(3) img,
-  .collage-interviews img:nth-of-type(3) { left:  0%; top: 50%; width: 100%; z-index: 2; }
+  .collage-interviews img:nth-of-type(2) { left:  4%; top: 50%; width: 88%; z-index: 1; }
 
   /* ── Short Films (page 7) ── */
-  /* child-1 = actor/umbrella cutout (lower left bleed) */
-  /* child-2 = TV/scene (lower) */
-  /* child-3 = KUDA poster (upper right) */
+  /* child-1 = sf01 wide scene (lower) */
+  /* child-2 = SF PR poster portrait (upper) */
   .collage-shortfilms a:nth-child(1) img,
-  .collage-shortfilms img:nth-of-type(1) { left:  0%; top: 48%; width: 60%; z-index: 3; }
+  .collage-shortfilms img:nth-of-type(1) { left:  4%; top: 50%; width: 88%; z-index: 1; }
   .collage-shortfilms a:nth-child(2) img,
-  .collage-shortfilms img:nth-of-type(2) { left:  5%; top: 52%; width: 90%; z-index: 1; }
-  .collage-shortfilms a:nth-child(3) img,
-  .collage-shortfilms img:nth-of-type(3) { left: 22%; top:  2%; width: 66%; z-index: 2; }
+  .collage-shortfilms img:nth-of-type(2) { left: 22%; top:  3%; width: 58%; z-index: 2; }
 
   /* ── Event Coverage (page 8) ── */
   .collage-events > img:nth-of-type(1) { left: 22%; top:  2%; width: 60%; }
@@ -1344,14 +1313,15 @@ h2 {
   .collage-events > img:nth-of-type(2) { left:  0%; top: 48%; width: 88%; }
 
   /* ── Meetings (page 9) ── */
+  /* child-1 = ME01 upper (main) */
+  /* child-2 = ME02 lower right */
+  /* child-3 = ME03 lower left */
   .collage-meetings a:nth-child(1) img,
-  .collage-meetings img:nth-of-type(1) { left: 22%; top:  2%; width: 58%; }
+  .collage-meetings img:nth-of-type(1) { left: 22%; top:  2%; width: 62%; z-index: 1; }
   .collage-meetings a:nth-child(2) img,
-  .collage-meetings img:nth-of-type(2) { left: 46%; top: 50%; width: 50%; }
+  .collage-meetings img:nth-of-type(2) { left: 40%; top: 50%; width: 54%; z-index: 3; }
   .collage-meetings a:nth-child(3) img,
-  .collage-meetings img:nth-of-type(3) { left:  0%; top: 48%; width: 72%; }
-  .collage-meetings a:nth-child(4) img,
-  .collage-meetings img:nth-of-type(4) { left: 58%; top:  3%; width: 40%; }
+  .collage-meetings img:nth-of-type(3) { left:  0%; top: 48%; width: 64%; z-index: 2; }
 
   /* ── Logos & Branding (page 10) ── */
   .collage-logos img:nth-child(1) { left: 15%; top: 52%; width: 72%; }
@@ -1362,10 +1332,9 @@ h2 {
   .collage-marketing img:nth-child(2) { left:  8%; top: 50%; width: 86%; }
 
   /* ── Banners (page 12) ── */
+  /* Two portrait rollup banners side by side */
   .collage-banners img:nth-child(1) { left: 22%; top:  4%; width: 36%; }
-  .collage-banners img:nth-child(2) { left: 50%; top:  4%; width: 36%; }
-  .collage-banners img:nth-child(3) { left:  2%; top: 52%; width: 55%; opacity: 0.7; }
-  .collage-banners img:nth-child(4) { left: 18%; top: 30%; width: 62%; opacity: 0.55; }
+  .collage-banners img:nth-child(2) { left: 52%; top:  4%; width: 36%; }
 
   /* ── Video Ads (page 13) ── */
   .collage-video a:nth-child(1) img,
