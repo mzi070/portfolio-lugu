@@ -16,7 +16,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   background: radial-gradient(circle at 20% 20%, #e7efeb 0%, var(--bg) 60%, #d0ddd7 100%);
   color: var(--ink-dark);
 }
@@ -53,7 +53,7 @@ main {
 .hero-title,
 h1,
 h2 {
-  font-family: "Poiret One", cursive;
+  font-family: Optima, Candara, 'Segoe UI', sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--ink);
@@ -146,8 +146,8 @@ h2 {
 .cover-icons img:nth-child(9) { transform: translateY(18px) rotate(-5deg) scale(0.98); }
 
 .cover-page h1 {
-  font-family: "Jost", sans-serif;
-  font-weight: 600;
+  font-family: Impact, 'DIN Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 900;
   font-size: clamp(5rem, 10.5vw, 11rem);
   letter-spacing: 0.03em;
   margin-top: clamp(48px, 8vh, 58px);
@@ -195,8 +195,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Jost", sans-serif;
-  font-weight: 500;
+  font-family: "Source Sans 3", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
   font-size: clamp(1.1rem, 1.5vw, 1.8rem);
   letter-spacing: 0.14em;
   color: #0d6569;
@@ -209,8 +209,8 @@ h2 {
   font-size: clamp(3.8rem, 6vw, 4.8rem);
   line-height: 1;
   color: #0f6264;
-  font-family: "Jost", sans-serif;
-  font-weight: 600;
+  font-family: Impact, 'DIN Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 900;
 }
 
 .content-columns {
@@ -269,7 +269,7 @@ h2 {
   font-size: clamp(1rem, 1.18vw, 1.55rem);
   line-height: 1.58;
   letter-spacing: 0.012em;
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-weight: 300;
 }
 
@@ -287,7 +287,7 @@ h2 {
 
 .software-row span {
   font-size: clamp(2rem, 3vw, 3.4rem);
-  font-family: "Poiret One", cursive;
+  font-family: Optima, Candara, 'Segoe UI', sans-serif;
   margin-right: 8px;
 }
 
@@ -446,7 +446,7 @@ h2 {
 }
 
 .thankyou-page h2 {
-  font-family: "Poiret One", cursive;
+  font-family: Optima, Candara, 'Segoe UI', sans-serif;
   font-weight: 400;
   font-size: clamp(3.5rem, 8vw, 8rem);
   line-height: 1;
@@ -456,7 +456,7 @@ h2 {
 }
 
 .thankyou-subtitle {
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-weight: 300;
   font-size: clamp(1rem, 1.8vw, 1.5rem);
   letter-spacing: 0.3em;
@@ -474,7 +474,7 @@ h2 {
 
 .contact-form-wrapper h3,
 .contact-info-wrapper h3 {
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-weight: 500;
   font-size: clamp(1.3rem, 2vw, 1.8rem);
   color: var(--ink-dark);
@@ -496,7 +496,7 @@ h2 {
 }
 
 .form-group label {
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   color: var(--ink);
@@ -505,7 +505,7 @@ h2 {
 
 .form-group input,
 .form-group textarea {
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-size: 1rem;
   padding: 14px 18px;
   border: 2px solid rgba(47, 106, 87, 0.25);
@@ -529,7 +529,7 @@ h2 {
 }
 
 .submit-btn {
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-weight: 500;
   font-size: 1.05rem;
   padding: 16px 32px;
@@ -570,7 +570,7 @@ h2 {
   border-radius: 8px;
   text-decoration: none;
   color: var(--ink-dark);
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-size: 1rem;
   transition: all 0.3s ease;
   border: 2px solid transparent;
@@ -589,7 +589,7 @@ h2 {
 
 /* ═══ Social Links ═══ */
 .social-links h4 {
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   color: var(--ink-dark);
@@ -631,7 +631,7 @@ h2 {
 }
 
 .portfolio-footer p {
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-size: clamp(0.9rem, 1.1vw, 1rem);
   color: var(--ink);
   margin: 8px 0;
@@ -678,7 +678,7 @@ h2 {
 .contact {
   margin-top: 8vh;
   font-size: clamp(1rem, 1.18vw, 1.4rem);
-  font-family: "Jost", sans-serif;
+  font-family: "Source Sans 3", 'Myriad Pro', 'Segoe UI', sans-serif;
   font-weight: 400;
 }
 
