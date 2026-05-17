@@ -386,11 +386,11 @@ h2 {
 
 /* P9: ME01=boardroom Instagram phone(large portrait), ME02=blue-shirt cutout, ME03=V2045 tablet */
 .collage-meetings a:nth-child(1) img,
-.collage-meetings img:nth-of-type(1) { left: 28%; top: -5%; width: 50%; z-index: 2; }
+.collage-meetings img:nth-of-type(1) { left:  8%; top: 38%; width: 24%; z-index: 2; }
 .collage-meetings a:nth-child(2) img,
-.collage-meetings img:nth-of-type(2) { left:  2%; top: 46%; width: 50%; z-index: 1; }
+.collage-meetings img:nth-of-type(2) { left: 21%; top: -5%; width: 67%; z-index: 1; }
 .collage-meetings a:nth-child(3) img,
-.collage-meetings img:nth-of-type(3) { left: 46%; top: 50%; width: 46%; z-index: 3; }
+.collage-meetings img:nth-of-type(3) { left: 61%; top: 50%; width: 40%; z-index: 3; }
 
 /* LB01=X-GEN brand booklet(landscape), LB02=Rana Heyg jar+label(landscape) */
 .collage-logos img:nth-child(1) { left:  9%; top: 18%; width: 49%; }
@@ -756,6 +756,14 @@ h2 {
   /* Short Films adjustments for large screens */
   .collage-shortfilms .sf-tv             { left:  1%; top:  5%; width: 65%; z-index: 0; }
   .collage-shortfilms a:nth-child(2) img { left: 57%; top:  0%; width: 40%; z-index: 2; }
+
+  /* Meetings adjustments for large screens */
+  .collage-meetings a:nth-child(1) img,
+  .collage-meetings img:nth-of-type(1) { left:  8%; top: 38%; width: 24%; z-index: 2; }
+  .collage-meetings a:nth-child(2) img,
+  .collage-meetings img:nth-of-type(2) { left: 21%; top: -5%; width: 67%; z-index: 1; }
+  .collage-meetings a:nth-child(3) img,
+  .collage-meetings img:nth-of-type(3) { left: 61%; top: 50%; width: 40%; z-index: 3; }
 
   /* Other showcase pages enhancements for large screens */
   .collage {
