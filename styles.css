@@ -696,7 +696,7 @@ h2 {
 
 @media (min-width: 1400px) {
   .page {
-    min-height: 1191px;
+    min-height: 100svh;
   }
 
   .hero-title {
