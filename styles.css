@@ -375,8 +375,8 @@ h2 {
 .collage-interviews img:nth-of-type(2) { left: 16%; top:  0%; width: 78%; z-index: 1; }
 
 /* SF01=landscape TV frame (back), SF_PR=KUDA poster (front, in anchor) */
-.collage-shortfilms .sf-tv             { left:  3%; top:  8%; width: 60%; z-index: 0; }
-.collage-shortfilms a:nth-child(1) img { left: 52%; top:  2%; width: 34%; z-index: 2; }
+.collage-shortfilms .sf-tv             { left:  1%; top:  5%; width: 63%; z-index: 0; }
+.collage-shortfilms a:nth-child(2) img { left: 55%; top:  0%; width: 40%; z-index: 2; }
 
 /* EC01=TV frame (back), EC02PR=football cutout (mid), EC02=Fenaka phone (front) */
 .collage-events .ec-tv               { left:  3%; top:  4%; width: 65%; z-index: 0; }
@@ -753,8 +753,8 @@ h2 {
   .collage-events > img:nth-of-type(1) { left: 56%; top: -2%; width: 20%; z-index: 2; }
   .collage-events > a img              { left: 68%; top:  3%; width: 24%; z-index: 3; }
   /* Short Films adjustments for large screens */
-  .collage-shortfilms .sf-tv             { left:  3%; top:  8%; width: 62%; z-index: 0; }
-  .collage-shortfilms a:nth-child(1) img { left: 53%; top:  2%; width: 34%; z-index: 2; }
+  .collage-shortfilms .sf-tv             { left:  1%; top:  5%; width: 65%; z-index: 0; }
+  .collage-shortfilms a:nth-child(2) img { left: 57%; top:  0%; width: 40%; z-index: 2; }
 
   /* Other showcase pages enhancements for large screens */
   .collage {
@@ -1081,7 +1081,7 @@ h2 {
   .collage-interviews img:nth-of-type(2) { left: 20%; top: 2%; width: 75%; z-index: 1; }
 
   /* Short Films: 2-image desktop layout at medium screens */
-  .collage-shortfilms a:nth-child(1) img { left: 52%; top:  2%; width: 34%; z-index: 2; }
+  .collage-shortfilms a:nth-child(2) img { left: 52%; top:  2%; width: 34%; z-index: 2; }
 
   /* Meetings collage adjustments */
   .collage-meetings a:nth-child(1) img,
@@ -1302,7 +1302,7 @@ h2 {
   /* SF01: TV frame lower-left bleed (mobile) */
   .collage-shortfilms .sf-tv             { display: block; left: -10%; top: 52%; width: 80%; z-index: 1; }
   /* SF_PR: KUDA poster upper-right (mobile) */
-  .collage-shortfilms a:nth-child(1) img { left: 28%; top:  3%; width: 50%; z-index: 2; }
+  .collage-shortfilms a:nth-child(2) img { left: 28%; top:  3%; width: 50%; z-index: 2; }
 
   /* ── Event Coverage (page 8) ── */
   .collage-events .ec-tv               { display: none; }
