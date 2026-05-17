@@ -73,6 +73,7 @@ h2 {
 .section-progress {
   --bar-w: 59.6%;    /* default: P1 = 1004/1684 */
   --bar-left: 20.7%; /* default: P1 = 348/1684 */
+  display: none;
   width: var(--bar-w);
   height: 12px;
   border-top: 2px solid var(--line);
@@ -1115,6 +1116,7 @@ h2 {
 
   /* at tablet, centre the bar (% positions are already relative, just tighten margins) */
   .section-progress {
+    display: block;
     --bar-w: 78%;
     --bar-left: 11%;
     bottom: 28px;
