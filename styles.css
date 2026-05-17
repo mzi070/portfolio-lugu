@@ -752,7 +752,7 @@ h2 {
   /* Event Coverage adjustments for large screens/TVs */
   .collage-events .ec-tv               { left:  3%; top:  4%; width: 79%; z-index: 0; }
   .collage-events > img:nth-of-type(1) { left: 78%; top:  4%; width: 31%; z-index: 2; }
-  .collage-events > a img              { left: 83%; top: 16%; width: 25%; z-index: 3; }
+  .collage-events > a img              { left: 79%; top:  4%; width: 20%; z-index: 3; }
   /* Short Films adjustments for large screens */
   .collage-shortfilms .sf-tv             { left:  1%; top:  5%; width: 65%; z-index: 0; }
   .collage-shortfilms a:nth-child(2) img { left: 57%; top:  0%; width: 40%; z-index: 2; }
