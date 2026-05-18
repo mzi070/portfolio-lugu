@@ -1239,12 +1239,12 @@ h2 {
     position: absolute;
     left: 0;
     top: 0;
-    width: 20vw;
+    width: 26vw;
     height: 100%;
     writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    text-orientation: upright;
     font-style: italic;
-    font-size: clamp(2rem, 7vw, 3.5rem);
+    font-size: clamp(2.5rem, 17vw, 7.5rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1255,12 +1255,14 @@ h2 {
   }
 
   /* Per-section title sizes tuned to title length (longer = smaller) */
-  #page-4  .showcase h2 { font-size: clamp(1.8rem, 6.2vw, 3rem); }
-  #page-8  .showcase h2 { font-size: clamp(1.8rem, 6.2vw, 3rem); }
-  #page-10 .showcase h2 { font-size: clamp(1.7rem, 6vw,   2.8rem); }
-  #page-11 .showcase h2 { font-size: clamp(1.4rem, 5vw,   2.3rem); }
+  #page-5  .showcase h2 { font-size: clamp(2rem, 13vw,   5.5rem); }
+  #page-4  .showcase h2 { font-size: clamp(2rem, 11.5vw, 5rem); }
+  #page-8  .showcase h2 { font-size: clamp(2rem, 13vw,   5.5rem); }
+  #page-10 .showcase h2 { font-size: clamp(2rem, 11.5vw, 5rem); }
+  #page-11 .showcase h2 { font-size: clamp(1.8rem, 9.5vw, 4rem); }
+  #page-14 .showcase h2 { font-size: clamp(2rem, 12.5vw, 5.2rem); }
   #page-12 .showcase h2,
-  #page-13 .showcase h2 { font-size: clamp(2.6rem, 8.5vw, 4rem); }
+  #page-13 .showcase h2 { font-size: clamp(2.5rem, 17vw,  7.5rem); }
 
   /* Collage fills the full section viewport */
   .showcase .collage {
@@ -1500,14 +1502,16 @@ h2 {
 
   /* Vertical title — smaller on very small phones */
   .showcase h2 {
-    font-size: clamp(1.7rem, 6vw, 2.8rem);
-    width: 18vw;
+    font-size: clamp(2rem, 14vw, 6rem);
+    width: 24vw;
   }
 
-  #page-4  .showcase h2 { font-size: clamp(1.5rem, 5.5vw, 2.5rem); }
-  #page-8  .showcase h2 { font-size: clamp(1.5rem, 5.5vw, 2.5rem); }
-  #page-10 .showcase h2 { font-size: clamp(1.4rem, 5.2vw, 2.4rem); }
-  #page-11 .showcase h2 { font-size: clamp(1.2rem, 4.5vw, 2rem); }
+  #page-5  .showcase h2 { font-size: clamp(1.8rem, 11vw,   4.5rem); }
+  #page-4  .showcase h2 { font-size: clamp(1.8rem, 9.5vw,  4rem); }
+  #page-8  .showcase h2 { font-size: clamp(1.8rem, 11vw,   4.5rem); }
+  #page-10 .showcase h2 { font-size: clamp(1.8rem, 9.5vw,  4rem); }
+  #page-11 .showcase h2 { font-size: clamp(1.5rem, 8vw,    3.2rem); }
+  #page-14 .showcase h2 { font-size: clamp(1.8rem, 10.5vw, 4.2rem); }
 
   /* Contents page narrower title strip */
   #page-2 { padding-left: 22vw !important; }
